@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://taskserver-i4zc.onrender.com';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 const apiUrl = axios.defaults.baseURL
 
 

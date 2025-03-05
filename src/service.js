@@ -21,7 +21,7 @@ axios.interceptors.response.use(
     return response;
   },
   error => {
-    console.error("error in interceptor", error);
+    console.error("error in interceptor", error.message);
     return Promise.reject(error);
   }
 );

@@ -29,16 +29,16 @@ axios.interceptors.response.use(
 
 export default {
 
-  //---item----
+  //---Item----
 
   getTasks: async () => {
-    const result = await axios.get(`${apiUrl}/item`)
+    const result = await axios.get(`${apiUrl}/Item`)
     return result.data;
   },
 
   addTask: async (name) => {
     try {
-      const result = await axios.post(`${apiUrl}/item/${name}`)
+      const result = await axios.post(`${apiUrl}/Item/${name}`)
       setAuthorizationBearer();
       return result.data;
     }
@@ -48,13 +48,13 @@ export default {
   },
 
   setCompleted: async (id, isComplete) => {
-    const result = await axios.put(`${apiUrl}/item/${id}/${isComplete}`)
+    const result = await axios.put(`${apiUrl}/Item/${id}/${isComplete}`)
     setAuthorizationBearer();
     return result.data;
   },
 
   deleteTask: async (id) => {
-    const result = await axios.delete(`${apiUrl}/item/${id}`)
+    const result = await axios.delete(`${apiUrl}/Item/${id}`)
     setAuthorizationBearer();
     return result.data;
   },

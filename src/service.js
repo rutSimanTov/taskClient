@@ -2,7 +2,6 @@ import axios from 'axios';
 
 // Set the default base URL for axios requests from environment variable
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-// const apiUrl = axios.defaults.baseURL
 
 
 function saveAccessToken(authResult) {

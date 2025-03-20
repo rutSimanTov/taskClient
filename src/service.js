@@ -1,7 +1,8 @@
 import axios from 'axios';
 
+// Set the default base URL for axios requests from environment variable
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-const apiUrl = axios.defaults.baseURL
+// const apiUrl = axios.defaults.baseURL
 
 
 function saveAccessToken(authResult) {
@@ -32,13 +33,13 @@ export default {
   //---Item----
 
   getTasks: async () => {
-    const result = await axios.get(`${apiUrl}/Item`)
+    const result = await axios.get(`/Item`)
     return result.data;
   },
 
   addTask: async (name) => {
     try {
-      const result = await axios.post(`${apiUrl}/Item/${name}`)
+      const result = await axios.post(`/Item/${name}`)
       setAuthorizationBearer();
       return result.data;
     }
@@ -48,13 +49,13 @@ export default {
   },
 
   setCompleted: async (id, isComplete) => {
-    const result = await axios.put(`${apiUrl}/Item/${id}/${isComplete}`)
+    const result = await axios.put(`/Item/${id}/${isComplete}`)
     setAuthorizationBearer();
     return result.data;
   },
 
   deleteTask: async (id) => {
-    const result = await axios.delete(`${apiUrl}/Item/${id}`)
+    const result = await axios.delete(`/Item/${id}`)
     setAuthorizationBearer();
     return result.data;
   },

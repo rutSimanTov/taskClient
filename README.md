@@ -41,7 +41,7 @@ cd taskClient
 ```
 3. Open the index.html file in your browser to run the client.
 ## Backend Integration 🔗
-Ensure the backend server is set up and running. The server repository can be found [here]https://github.com/rutSimanTov/taskClient.gi.
+Ensure the backend server is set up and running. The server repository can be found [here](https://github.com/rutSimanTov/taskServer).
 
 ## Contributing 💡
 Contributions are welcome! Feel free to submit a pull request or open an issue for any enhancements or bugs.
